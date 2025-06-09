@@ -1,0 +1,98 @@
+@font-face {
+  font-family: "Silka";
+  src: url("./fonts/Silka/Silka\ Regular.otf") format("opentype");
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Global styles */
+body {
+  margin: 0;
+  padding: 2rem;
+  font-family: "Silka", sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  background-image: url("./images/AdobeStock_1163626308.jpg"); /* adjust the path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4 {
+  font-family: "Silka", sans-serif;
+  font-weight:600;
+  color: #009373; 
+}
+
+h1 { font-size: 2rem; }
+h2 { font-size: 1.6rem; }
+h3 { font-size: 1.3rem; }
+
+.logo-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+}
+
+.logo-top-right {
+  width: 120px;
+  height: auto;
+}
+
+/* shoelace styling */
+/* Base border styling for all Shoelace fields */
+sl-input::part(base),
+sl-select::part(base),
+sl-textarea::part(base) {
+  border: 1px solid #009373 !important;
+  border-radius: 6px !important;
+}
+
+/* Text inside inputs/selects */
+sl-input::part(input),
+sl-textarea::part(textarea),
+sl-select::part(display-input) {
+  font-family: "Silka", sans-serif !important;
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Optional: label text above inputs/selects */
+sl-input::part(form-control-label),
+sl-select::part(form-control-label) {
+  font-family: "Silka", sans-serif;
+  font-weight: 500;
+  color: #000;
+}
+
+/* Optional: hover or focus glow */
+sl-input::part(base):focus-within,
+sl-select::part(base):focus-within,
+sl-textarea::part(base):focus-within {
+  box-shadow: 0 0 0 2px rgba(0, 147, 115, 0.3);
+}
+
+/* Center app content */
+#root {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Spacing around buttons */
+sl-button {
+  margin-top: 1rem;
+  width: 100%;
+  font-family: "Silka", sans-serif;
+}
+
+/* Error class styling */
+.input-error {
+  border: 2px solid red;
+  outline: none;
+}
+
