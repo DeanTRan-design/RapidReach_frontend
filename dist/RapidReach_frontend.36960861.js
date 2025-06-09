@@ -667,7 +667,6 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 }
 
 },{}],"bNJxx":[function(require,module,exports,__globalThis) {
-var _mainScss = require("./main.scss");
 const logoUrl = new URL(require("e3427944aa93b8c6")).href;
 console.log("Logo path:", logoUrl);
 // Helper function to decode JWT
@@ -835,11 +834,13 @@ function loadView(view) {
     </sl-alert>
     <h2>Emergency Report</h2>
     <sl-input label="Location" id="location" required></sl-input>
+    <br><br>
     <sl-select label="Category" id="category" required>
       <sl-option value="fire">Fire</sl-option>
       <sl-option value="medical">Medical</sl-option>
       <sl-option value="police">Police</sl-option>
     </sl-select>
+    <br><br>
     <sl-textarea label="Message" id="message" rows="3" required></sl-textarea>
     <sl-button variant="danger" id="submit-report">Submit Emergency Report</sl-button>
     <sl-button id="go-home" variant="success">Back to Home</sl-button>
@@ -1018,7 +1019,7 @@ loadView(location.hash.replace("#", "") || "signin");
 if (localStorage.getItem("token") && location.hash === "#signin") location.hash = "home";
 window.parseJwt = parseJwt;
 
-},{"./main.scss":"1uV0l","e3427944aa93b8c6":"8z5l2"}],"1uV0l":[function() {},{}],"8z5l2":[function(require,module,exports,__globalThis) {
+},{"e3427944aa93b8c6":"8z5l2"}],"8z5l2":[function(require,module,exports,__globalThis) {
 module.exports = module.bundle.resolve("logo.3e06ac0f.png") + "?" + Date.now();
 
 },{}]},["io2N8","bNJxx"], "bNJxx", "parcelRequire9e99", {}, "./", "/")
