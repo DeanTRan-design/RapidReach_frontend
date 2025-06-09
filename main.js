@@ -274,8 +274,6 @@ function loadView(view) {
         <img src="${logoUrl}" alt="RapidReach Logo" class="logo-top-right" />
     </div>
     <h2>My Reports</h2><div id="report-list">Loading...</div>
-    <br><br>
-    <sl-button id="go-home" variant="success">Back to Home</sl-button>
   `;
 
   fetch("https://rapidreach-backend-guki.onrender.com/report", {
@@ -297,9 +295,6 @@ function loadView(view) {
       }
     })
     .catch(err => {
-      document.getElementById("go-home").addEventListener("click", () => {
-      window.location.hash = "home";
-      });
       document.getElementById("report-list").innerHTML = "Error loading reports.";
       console.error("Report load error:", err);
     });
