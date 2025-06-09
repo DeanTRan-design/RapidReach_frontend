@@ -182,11 +182,13 @@ function loadView(view) {
     </sl-alert>
     <h2>Emergency Report</h2>
     <sl-input label="Location" id="location" required></sl-input>
+    <br><br>
     <sl-select label="Category" id="category" required>
       <sl-option value="fire">Fire</sl-option>
       <sl-option value="medical">Medical</sl-option>
       <sl-option value="police">Police</sl-option>
     </sl-select>
+    <br><br>
     <sl-textarea label="Message" id="message" rows="3" required></sl-textarea>
     <sl-button variant="danger" id="submit-report">Submit Emergency Report</sl-button>
     <sl-button id="go-home" variant="success">Back to Home</sl-button>
@@ -272,6 +274,8 @@ function loadView(view) {
         <img src="${logoUrl}" alt="RapidReach Logo" class="logo-top-right" />
     </div>
     <h2>My Reports</h2><div id="report-list">Loading...</div>
+    <br><br>
+    <sl-button id="go-home" variant="success">Back to Home</sl-button>
   `;
 
   fetch("https://rapidreach-backend-guki.onrender.com/report", {
@@ -293,6 +297,9 @@ function loadView(view) {
       }
     })
     .catch(err => {
+      document.getElementById("go-home").addEventListener("click", () => {
+      window.location.hash = "home";
+      });
       document.getElementById("report-list").innerHTML = "Error loading reports.";
       console.error("Report load error:", err);
     });
