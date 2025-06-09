@@ -1,4 +1,3 @@
-import "./main.scss";
 const logoUrl = new URL('./images/logo.png', import.meta.url).href;
 console.log("Logo path:", logoUrl);
 // Helper function to decode JWT
